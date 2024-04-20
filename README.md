@@ -7,6 +7,8 @@ I made this little Programm with my first and only functional library? (im not s
 It is really bad but if you want to try it you can find it here <https://crates.io/crates/r34_api>
 
 # How to use it 
+Because its my First programm and im to lazy and stoopid to add a Code Signing Certificate you have to whitelist the exe file in your Antivirus.
+I would recommend making a new folder where you execute it cause its going to create some extra files.
 As soon as you run the exe file it will give you instructions.
 
 ## Tags
