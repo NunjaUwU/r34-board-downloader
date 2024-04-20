@@ -1,4 +1,4 @@
-use std::{fmt::format, fs, io::Write, path, time::Duration};
+use std::{fmt::format, fs, io::Write, path, thread, time::Duration};
 
 use r34_api::*;
 use tokio;
@@ -21,7 +21,7 @@ async fn main() {
     std::io::stdin().read_line(&mut tags_buf).unwrap();
 
     if tags_buf.trim() == "".to_string() {
-        println!("Please add some Tags. Seperate with spaces e.g. 'big_ass cock' or '-yaoi -tits' for blacklisting tags6");
+        println!("Please add some Tags.\n Seperate with spaces e.g. 'big_ass cock' or '-yaoi -tits' for blacklisting tags");
         std::io::stdin().read_line(&mut tags_buf).unwrap();
     };
 
@@ -34,8 +34,9 @@ async fn main() {
     let limit = match limit_buf.trim().parse::<usize>() {
         Ok(u) => u,
         Err(_) => {
-            println!("U probably forgot to set a limit\nSetting it to 10");
-            10
+            println!("Couldn't read input\nU probably didn't enter any number.\nOr it could be a to big input.\n Please try again with another input");
+            thread::sleep(Duration::from_secs(5));
+            panic!();
         }
     };
 
