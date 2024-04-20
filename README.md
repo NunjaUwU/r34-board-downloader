@@ -1,6 +1,8 @@
 # What is It?
 A CLI App with which you can download files from R34 by tags.
 
+I would not recommend using it but hey have fun.
+
 I made this little Programm with my first and only functional library? (im not sure if it can be called one).
 It is really bad but if you want to try it you can find it here <https://crates.io/crates/r34_api>
 
