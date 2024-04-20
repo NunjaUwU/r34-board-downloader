@@ -34,7 +34,7 @@ async fn main() {
     let limit = match limit_buf.trim().parse::<usize>() {
         Ok(u) => u,
         Err(_) => {
-            println!("Couldn't read input\nU probably didn't enter any number.\nOr it could be a to big input.\n Please try again with another input");
+            println!("Couldn't read input\nU probably didn't enter any number.\nOr it could be a to big input.\nPlease try again with another input");
             thread::sleep(Duration::from_secs(5));
             panic!();
         }
